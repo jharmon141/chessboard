@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <SideBar />
+
+    <Board />
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SideBar from './components/SideBar.vue'
+import Board from './components/Board.vue'
+import Tile from './components/Tile.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    SideBar,
+    Board,
+    Tile
   }
 }
 </script>
