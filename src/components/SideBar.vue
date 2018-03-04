@@ -4,9 +4,10 @@
         <div v-if="!$store.getters.currentTile">
             <h2>Select a tile</h2>
         </div>
+
         <div v-else>
             <h2>Current Tile:</h2>
-            <h3>{{ currentTile }}</h3>
+            <h1>{{ currentTile }}</h1>
 
             <h2>Select History:</h2>
             <p>{{ selectHistory }}</p>
@@ -39,6 +40,7 @@ export default {
 <style scoped>
 #side-bar {
   background-color: gainsboro;
+  color: #2c3e50;
   position: fixed;
   text-align: center;
   top: 0;
