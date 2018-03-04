@@ -40,6 +40,7 @@ export default {
 #side-bar {
   background-color: gainsboro;
   position: fixed;
+  text-align: center;
   top: 0;
   right: 0;
   height: 100%;
