@@ -1,35 +1,60 @@
 <template>
   <div id="app">
 
-    <SideBar />
+    <main>
+      <Board />
+    </main>
 
-    <Board />
+    <SideBar />
 
   </div>
 </template>
 
+
 <script>
 import SideBar from './components/SideBar.vue'
 import Board from './components/Board.vue'
-import Tile from './components/Tile.vue'
 
 export default {
   name: 'app',
   components: {
     SideBar,
-    Board,
-    Tile
+    Board
   }
 }
 </script>
 
+
 <style>
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+
+main {
+  width: 75%;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@media only screen 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+      main {
+        width: 100%;
+        height: 70%;
+        top: 0;
+      }
+
 }
 </style>
