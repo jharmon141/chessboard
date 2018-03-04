@@ -40,9 +40,14 @@ export default {
   box-shadow: inset 4px 4px limegreen, inset -4px -4px limegreen;
 }
 
+#row-title {
+    margin: 4px 0px 0px 4px;
+}
+
 #tile #column-title {
     position: absolute;
     bottom: 0;
     right: 0;
+    margin-right: 4px;
 }
 </style>
