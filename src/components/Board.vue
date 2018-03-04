@@ -59,6 +59,7 @@ export default {
             }
 
             const currentlySelectedTile = this.$store.getters.currentTile
+
             if (!currentlySelectedTile || selectedTile.row !== currentlySelectedTile.row || selectedTile.column !== currentlySelectedTile.column) {
                 this.$store.dispatch('handleAddSelectedTile', selectedTile)
             }

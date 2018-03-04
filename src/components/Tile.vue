@@ -3,20 +3,21 @@
         v-on:click="$emit('selectTile')"
         :class="{ black: black, selected: selected }">
 
-        <span v-if="column == 'A'" id="row-title">{{ row }}</span>
-        <span v-if="row == 1" id="column-title">{{ column }}</span>
+        <span v-if="column == 'A'" class="row-title">{{ row }}</span>
+        <span v-if="row == 1" class="column-title">{{ column }}</span>
+
     </div>
 </template>
 
 
 <script>
-
 export default {
     name: 'Tile',
     props: ['column', 'row', 'black'],
     computed: {
         selected() {
-            return this.$store.getters.currentTile && this.column === this.$store.getters.currentTile.column && this.row === this.$store.getters.currentTile.row
+            const currentTile = this.$store.getters.currentTile
+            return currentTile && this.column === currentTile.column && this.row === currentTile.row
         }
     }
 
@@ -40,11 +41,11 @@ export default {
   box-shadow: inset 4px 4px limegreen, inset -4px -4px limegreen;
 }
 
-#row-title {
+.row-title {
     margin: 4px 0px 0px 4px;
 }
 
-#tile #column-title {
+#tile .column-title {
     position: absolute;
     bottom: 0;
     right: 0;

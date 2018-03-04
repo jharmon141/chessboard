@@ -11,7 +11,6 @@
 
             <h2>Select History:</h2>
             <p>{{ selectHistory }}</p>
-
         </div>
 
     </div>
@@ -23,13 +22,13 @@ export default {
     name: 'SideBar',
     computed: {
         currentTile() {
-            return `${this.$store.getters.currentTile.column}${this.$store.getters.currentTile.row}`
+            const currentTile = this.$store.getters.currentTile
+            return `${currentTile.column}${currentTile.row}`
         },
 
         selectHistory() {
-            return this.$store.state.selectedTiles.map(tile => {
-                return `${tile.column}${tile.row}`
-            }).join(', ')
+            const formattedTiles = this.$store.state.selectedTiles.map(tile => `${tile.column}${tile.row}`)
+            return formattedTiles.join(', ')
         }
     }
 
