@@ -14,7 +14,7 @@ export default new Vuex.Store({
   },
   mutations: {
     addSelectedTile: (state, params) => {
-      state.selectedTiles.push(params)
+      state.selectedTiles = [...state.selectedTiles, params]
     }
   },
   actions: {
